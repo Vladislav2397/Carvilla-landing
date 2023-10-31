@@ -15,6 +15,7 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "gulp-clean": "^0.4.0",
     "gulp-pretty-html": "^2.0.10"
   }
 }

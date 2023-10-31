@@ -1,7 +1,10 @@
-const { src, dest, series } = require('gulp');
-const pug = require('gulp-pug');
+const { src, dest, series } = require('gulp')
+const pug = require('gulp-pug')
+const gulpClean = require('gulp-clean')
 
 function clean(done) {
+    src('dist/**/*', {read: false})
+        .pipe(gulpClean());
     done()
 }
 
