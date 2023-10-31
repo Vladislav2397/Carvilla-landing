@@ -1,0 +1,101 @@
+section#home.welcome-hero
+  
+  .top-area
+    .header-area
+      nav.navbar.navbar-default.bootsnav.navbar-sticky.navbar-scrollspy(data-minus-value-desktop='70' data-minus-value-mobile='55' data-speed='1000')
+        .container
+
+          .navbar-header
+            button.navbar-toggle(type='button' data-toggle='collapse' data-target='#navbar-menu')
+              i.fa.fa-bars
+            a.navbar-brand(href='index.html')
+              | carvilla
+              span
+
+          #navbar-menu.collapse.navbar-collapse.menu-ui-design
+            ul.nav.navbar-nav.navbar-right(data-in='fadeInDown' data-out='fadeOutUp')
+              li.scroll.active
+                a(href='#home') home
+              li.scroll
+                a(href='#service') service
+              li.scroll
+                a(href='#featured-cars') featured cars
+              li.scroll
+                a(href='#new-cars') new cars
+              li.scroll
+                a(href='#brand') brands
+              li.scroll
+                a(href='#contact') contact
+
+    .clearfix
+  .container
+    .welcome-hero-txt
+      h2 get your desired car in resonable price
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua.
+      button.welcome-btn(onclick="window.location.href='#'") contact us
+  .container
+    .row
+      .col-md-12
+        .model-search-content
+          .row
+            .col-md-offset-1.col-md-2.col-sm-12
+
+              .single-model-search
+                h2 select year
+                .model-select-icon
+                  select.form-control
+                    option(value='default') year
+                    option(value='2018') 2018
+                    option(value='2017') 2017
+                    option(value='2016') 2016
+
+              .single-model-search
+                h2 body style
+                .model-select-icon
+                  select.form-control
+                    option(value='default') style
+                    option(value='sedan') sedan
+                    option(value='van') van
+                    option(value='roadster') roadster
+
+            .col-md-offset-1.col-md-2.col-sm-12
+              .single-model-search
+                h2 select make
+                .model-select-icon
+                  select.form-control
+                    option(value='default') make
+                    option(value='toyota') toyota
+                    option(value='holden') holden
+                    option(value='maecedes-benz') maecedes-benz.
+                    
+              .single-model-search
+                h2 car condition
+                .model-select-icon
+                  select.form-control
+                    option(value='default') condition
+                    option(value='something') something
+                    option(value='something') something
+                    option(value='something') something
+
+            .col-md-offset-1.col-md-2.col-sm-12
+              .single-model-search
+                h2 select model
+                .model-select-icon
+                  select.form-control
+                    option(value='default') model
+                    option(value='kia-rio') kia-rio
+                    option(value='mitsubishi') mitsubishi
+                    option(value='ford') ford
+              .single-model-search
+                h2 select price
+                .model-select-icon
+                  select.form-control
+                    option(value='default') price
+                    option(value='$0.00') $0.00
+                    option(value='$0.00') $0.00
+                    option(value='$0.00') $0.00
+            .col-md-2.col-sm-12
+              .single-model-search.text-center
+                button.welcome-btn.model-search-btn(onclick="window.location.href='#'")
+                  | search

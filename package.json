@@ -6,7 +6,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@babel/register": "^7.22.15",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-pug": "^5.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp-pretty-html": "^2.0.10"
   }
 }
