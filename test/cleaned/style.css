@@ -1,0 +1,156 @@
+/*==================================
+* Author        : "ThemeSine"
+* Template Name : CarVilla  HTML Template
+* Version       : 1.0
+==================================== */
+
+/*==================================
+font-family: 'Poppins', sans-serif;
+font-family: 'Rufina', serif;
+==================================== */
+
+
+/*=========== TABLE OF CONTENTS ===========
+1.  General css (Reset code)
+2.  Top-area
+3.  Welcome-hero
+4.  Model-search
+5.  Service
+6.  New-cars
+7.  Featured-cars
+8.  Client-say
+9.  Brand
+10. Blog
+11. Contact
+==========================================*/
+
+/*-------------------------------------
+		1.General css (Reset code)
+--------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	font-size:16px;
+	color:#818998;
+    text-transform:initial;
+    max-width:1920px;
+    margin:0 auto;
+	overflow-x:hidden;
+}
+
+html,body{height: 100%;}
+/* section-header */
+
+/* section-header */
+
+/*=============Style css=========*/
+
+
+/*-------------------------------------
+        2. Top-area
+--------------------------------------*/
+
+/*.navbar-brand*/
+/*.navbar-brand*/
+
+/*.nav li*/
+/*.nav li*/
+
+/*.menu-ui-design*/
+/*.menu-ui-design*/
+
+/*.navbar-toggle */
+/*.navbar-toggle */
+
+/*-------------------------------------
+        3.  Welcome-hero
+--------------------------------------*/
+
+/*.welcome-hero-txt*/
+/*.welcome-hero-txt*/
+
+/*-------------------------------------
+        4. Model-Search
+--------------------------------------*/
+
+/*.single-model-search*/
+/*model-select-icon*//*model-select-icon*/
+
+/*.single-model-search*/
+
+/*-------------------------------------
+        5. Service 
+--------------------------------------*/
+
+
+/*-------------------------------------
+        6. New-cars
+--------------------------------------*/
+/*.new-cars-txt*/
+/*.new-cars-txt*/
+
+/*.owl-dots */
+/*.owl-dots */
+
+/*-------------------------------------
+        7. Featured-cars
+--------------------------------------*/
+
+/*.single-featured-cars*/
+/*.single-featured-cars*/
+
+/*-------------------------------------       
+        8. Clients-say 
+--------------------------------------*/
+
+/*single-testimonial-box */
+
+/*testimonial-description*/
+/* testimonial-info *//* testimonial-info */
+
+
+/* testimonial-comment *//* testimonial-comment */
+
+
+/*testimonial-description*/
+
+/*owl carousel*/
+/*owl carousel*/
+
+/*-------------------------------------
+        9. Brand
+--------------------------------------*/
+/*-------------------------------------
+        10. Blog
+--------------------------------------*/
+
+/*-------------------------------------
+        12. Contact
+--------------------------------------*/
+
+/*.footer-logo*/
+/*.footer-logo*/
+/*hm-foot-email*/
+/*hm-foot-email*/
+/*.footer-copyright */
+/*.footer-copyright */
+
+/*===============================
+    Scroll Top
+===============================*/
+@keyframes example {
+    0%   {bottom:0px;}
+    100%  {bottom:7px;}
+}
+/*========================Thank you================= */
