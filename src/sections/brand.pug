@@ -1,34 +1,24 @@
+-
+    const images = [
+        'br1.webp',
+        'br2.webp',
+        'br3.webp',
+        'br4.webp',
+        'br5.webp',
+        'br6.webp',
+    ]
 
 section#brand.brand
   .container
     .brand-area
       .owl-carousel.owl-theme.brand-item
-        .item
-          a(href='#')
-            img(loading='lazy' src='assets/images/brand/br1.png' alt='brand-image')
-        
-        .item
-          a(href='#')
-            img(loading='lazy' src='assets/images/brand/br2.png' alt='brand-image')
-        
-        .item
-          a(href='#')
-            img(loading='lazy' src='assets/images/brand/br3.png' alt='brand-image')
-        
-        .item
-          a(href='#')
-            img(loading='lazy' src='assets/images/brand/br4.png' alt='brand-image')
-        
-        .item
-          a(href='#')
-            img(loading='lazy' src='assets/images/brand/br5.png' alt='brand-image')
-        
-        .item
-          a(href='#')
-            img(loading='lazy' src='assets/images/brand/br6.png' alt='brand-image')
-        
-      
-    
-  
-
-
+        each image of images
+          .item
+            a(href='#')
+              img(
+                loading='lazy'
+                width="110"
+                height="78"
+                src=`assets/images/brand/${image}`
+                alt='brand-image'
+              )

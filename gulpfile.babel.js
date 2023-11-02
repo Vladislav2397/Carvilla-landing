@@ -1,9 +1,12 @@
-const gulp = require('gulp')
-const pug = require('gulp-pug')
-const gulpClean = require('gulp-clean')
-const prettyHtml = require('gulp-pretty-html')
-const cleanHtml = require('gulp-htmlclean')
-const gulpRename = require('gulp-rename')
+import gulp from 'gulp'
+import pug from 'gulp-pug'
+import gulpClean from 'gulp-clean'
+import prettyHtml from 'gulp-pretty-html'
+import cleanHtml from 'gulp-htmlclean'
+import gulpRename from 'gulp-rename'
+import purgecss from 'gulp-purgecss'
+import webp from 'gulp-webp'
+import imagemin from 'gulp-imagemin'
 
 const tasks = {
     clean: 'clean',
@@ -11,11 +14,12 @@ const tasks = {
     pages: 'pages',
     views: 'views',
     copy: 'copy',
+    images: 'images',
     purgecss: 'purgecss',
 }
 
 gulp.task(tasks.clean, () => {
-    return gulp.src('dist/**', {read: false})
+    return gulp.src('dist', {read: false})
         .pipe(gulpClean())
 })
 
@@ -35,14 +39,6 @@ gulp.task(tasks.copy, () => {
     return gulp.src('./src/assets/**/*').pipe(gulp.dest('dist/assets'))
 })
 
-// gulp.task('purgecss', () => {
-//     return gulp.src('src/**/*.css')
-//         .pipe(purgecss({
-//             content: ['src/**/*.html']
-//         }))
-//         .pipe(gulp.dest('build/css'))
-// })
-
 gulp.task(tasks.views, () => {
     return gulp.src("./src/pages/*.page.pug")
         .pipe(
@@ -60,8 +56,6 @@ gulp.task(tasks.views, () => {
         .pipe(gulp.dest("./dist"))
 })
 
-const purgecss = require('gulp-purgecss')
-
 gulp.task(tasks.purgecss, () => {
     return gulp.src('dist/**/*.css')
         .pipe(purgecss({
@@ -70,11 +64,17 @@ gulp.task(tasks.purgecss, () => {
         .pipe(gulp.dest('dist'))
 })
 
-const common = gulp.series(tasks.views, tasks.copy, tasks.cleanPages)
+gulp.task(tasks.images, () => {
+    return gulp.src('dist/assets/images/**/*')
+        .pipe(webp())
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/assets/images'))
+})
+
+const common = gulp.series(tasks.views, tasks.copy, tasks.cleanPages, tasks.images)
 const build = gulp.series(common) // , tasks.purgecss
 
-const dev = gulp.series(tasks.clean, common, tasks.pages)
-exports.dev = dev
-exports.prod = gulp.series(tasks.clean, build)
+export const dev = gulp.series(tasks.clean, common, tasks.pages)
+export const prod = gulp.series(tasks.clean, build)
 
-exports.default = dev
+export default dev

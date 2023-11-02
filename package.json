@@ -1,16 +1,19 @@
 {
   "name": "carvilla",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "node index.js",
     "dev": "gulp dev",
     "build": "gulp prod",
+    "images": "gulp images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@babel/register": "^7.22.15",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
+    "del": "^7.1.0",
     "express": "^4.18.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -21,7 +24,9 @@
   "devDependencies": {
     "gulp-clean": "^0.4.0",
     "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^8.0.0",
     "gulp-pretty-html": "^2.0.10",
-    "gulp-purgecss": "^5.0.0"
+    "gulp-purgecss": "^5.0.0",
+    "gulp-webp": "^5.0.0"
   }
 }
