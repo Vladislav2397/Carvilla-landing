@@ -1,3 +1,5 @@
+include ../utils/image
+
 section#new-cars.new-cars
   .container
     .section-header
@@ -14,7 +16,18 @@ section#new-cars.new-cars
             .row
               .col-md-7.col-sm-12
                 .new-cars-img
-                  img(loading='lazy' width="306" height="130" src='assets/images/new-cars-model/ncm1.webp' alt='img')
+                  +image({
+                    width: 657,
+                    height: 298,
+                    loading: 'lazy',
+                    src: 'assets/images/new-cars-model/ncm1.png',
+                    alt: "img",
+                    sizes: [
+                        {
+                            src: 'assets/images/new-cars-model/ncm1.webp',
+                        }
+                    ],
+                  })
                 
               .col-md-5.col-sm-12
                 .new-cars-txt
@@ -34,13 +47,18 @@ section#new-cars.new-cars
             .row
               .col-md-7.col-sm-12
                 .new-cars-img
-                  img(
-                    loading='lazy' 
-                    width="306" 
-                    height="130"
-                    src='assets/images/new-cars-model/ncm2.webp' 
-                    alt='img'
-                )
+                  +image({
+                    width: 657,
+                    height: 298,
+                    loading: 'lazy',
+                    src: 'assets/images/new-cars-model/ncm2.png',
+                    alt: "img",
+                    sizes: [
+                        {
+                            src: 'assets/images/new-cars-model/ncm2.webp',
+                        }
+                    ],
+                  })
                 
               .col-md-5.col-sm-12
                 .new-cars-txt
@@ -58,13 +76,18 @@ section#new-cars.new-cars
             .row
               .col-md-7.col-sm-12
                 .new-cars-img
-                  img(
-                    loading='lazy' 
-                    width="306" 
-                    height="130"
-                    src='assets/images/new-cars-model/ncm3.webp' 
-                    alt='img'
-                )
+                  +image({
+                    width: 657,
+                    height: 298,
+                    loading: 'lazy',
+                    src: 'assets/images/new-cars-model/ncm3.png',
+                    alt: "img",
+                    sizes: [
+                        {
+                            src: 'assets/images/new-cars-model/ncm3.webp',
+                        }
+                    ],
+                  })
 
               .col-md-5.col-sm-12
                 .new-cars-txt

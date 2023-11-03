@@ -1,0 +1,18 @@
+mixin image({ width, height, loading, src, alt, sizes })
+    picture
+        if sizes
+            each size in sizes
+                source(
+                    media=size.media
+                    width=size.width || width
+                    height=size.height || height
+                    srcset=size.src
+                    alt=size.alt || alt
+                )
+        img(
+            width=width
+            height=height
+            loading=loading
+            src=src
+            alt=alt
+        )

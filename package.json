@@ -22,6 +22,7 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "critical": "^6.0.4",
     "gulp-clean": "^0.4.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-imagemin": "^8.0.0",

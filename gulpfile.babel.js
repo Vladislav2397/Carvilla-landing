@@ -7,6 +7,7 @@ import gulpRename from 'gulp-rename'
 import purgecss from 'gulp-purgecss'
 import webp from 'gulp-webp'
 import imagemin from 'gulp-imagemin'
+import {stream as critical} from 'critical'
 
 const tasks = {
     clean: 'clean',
@@ -16,10 +17,34 @@ const tasks = {
     copy: 'copy',
     images: 'images',
     purgecss: 'purgecss',
+    critical: 'critical'
 }
 
+gulp.task(tasks.critical, () => {
+    return gulp
+        .src("dist/*.html")
+        .pipe(
+            critical({
+                base: "dist/",
+                inline: true,
+                css: [
+                    "dist/assets/css/style.css",
+                    "dist/assets/css/bootstrap.min.css",
+                    "dist/assets/css/responsive.css"
+                ],
+            })
+        )
+        .on("error", (err) => {
+            log.error(err.message);
+        })
+        .pipe(gulp.dest("dist"));
+});
+
+
 gulp.task(tasks.clean, () => {
-    return gulp.src('dist', {read: false})
+    return gulp.src('dist', {
+        allowEmpty: true
+    })
         .pipe(gulpClean())
 })
 
@@ -71,8 +96,8 @@ gulp.task(tasks.images, () => {
         .pipe(gulp.dest('dist/assets/images'))
 })
 
-const common = gulp.series(tasks.views, tasks.copy, tasks.cleanPages, tasks.images)
-const build = gulp.series(common) // , tasks.purgecss
+const common = gulp.series(tasks.clean, tasks.copy, tasks.views, tasks.cleanPages, tasks.images)
+const build = gulp.series(common, tasks.critical) // , tasks.purgecss
 
 export const dev = gulp.series(tasks.clean, common, tasks.pages)
 export const prod = gulp.series(tasks.clean, build)
